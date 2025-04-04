@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --link-color: #262c55;
+    --link-bg1: #eee;
+    --link-bg2: #0a0e27;
+    --text-color: #1d1d1d;
+    --big-texColor: #fb9129;
+    --business-color: #35a162;
+    --sub-bg: #f8fafd;
+}
+@font-face {
+    font-family: Millik;
+    src: url(Millik\ Regular.otf);
+    font-weight: bold;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+.top-nav{
+    gap: 4em;
+    align-items: center;
+    padding: 0 9%;
+}
+.top-nav .logo{
+    font-family: Millik, sans-serif;
+    font-size: 16px;
+}
+.list-itemm li{
+    display: inline-block;
+}
+.list-itemm li a{
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 15px;
+    padding: 0 12px;
+    font-weight: 700;
+}
+.sign-in{
+    background-color: var(--link-bg1);
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 12px 50px;
+    border-radius: 8px;
+}
+.sign-in:hover{
+    background-color: var(--link-bg2);
+    color: #fff;
+    transition: all 0.3s;
+}
+.showcase{
+    padding: 4% 9%;
+}
+.showcase h1{
+    font-size: 6em;
+    font-family: Millik, sans-serif;
+    color: black;
+    width: 50%;
+}
+.showcase p{
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.colored{
+    color: var(--big-texColor);
+}
+.contact-btn{
+    background-color: var(--link-bg1);
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 25px;
+    border-radius: 8px;
+}
+.acct-btn{
+    background-color: var(--link-bg2);
+    text-decoration: none;
+    color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.clothes{
+    position: relative;
+}
+.side-2{
+    position: relative;
+    transform: translateY(-27%);
+}
+.side-2 .bottom{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 2em;
+    max-width: 70%;
+}
+.first-sidepic{
+    height: 70%;
+}
+.second-sidepic{
+    height: 100%;
+}
+.trusted{
+    margin-top: -10%;
+    padding: 0 9%;
+}
+.trusted-logo img{
+    width: 80%;
+    margin-top: 40px;
+}
+.endless-pay {
+    padding: 9% 9%;
+    margin-top: 9%;
+}
+.endless-pay h1{
+    font-size: 4em;
+    font-family: Millik, sans-serif;
+    color: black;
+    width: 50%;
+}
+.endless-pay h4{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.endless-pay p{
+    line-height: 2rem;
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.endless-pay a{
+    color: #fb9129;
+    text-decoration: none;
+}
+.get-started{
+    background-color: var(--link-bg2);
+    text-decoration: none;
+    color: #fff !important;
+    padding: 15px;
+    border-radius: 8px;
+}
+.top2{
+    margin-bottom: 40%;
+}
+.checkout-img{
+    width: 90%;
+    box-shadow: 0px 0px 50px 5px rgb(219, 218, 218);
+}
+main{
+    background-color: var(--sub-bg);
+}
+.small-business{
+    padding: 8% 9%;
+}
+.small-business h1{
+    font-size: 4.5em;
+    font-family: Millik, sans-serif;
+    color: black;
+    width: 90%;
+}
+
+
+.colored-green{
+    color: var(--business-color);
+}
+
+.store h4{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.store p{
+    width: 80%;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.store-div{
+    padding: 6% 8%;
+}
+.store-img{
+    width: 120%;
+    height: 100%;
+}
+.creator{
+    transform: translateY(-25%)
+}
+.creator-img{
+    width: 100%;
+}
+.creator p{
+    text-align: center;
+    margin-top: 20px;
+}
+.creator-section{
+    gap: 5em;
+}
+.side-3{
+    /* margin-left: 20%; */
+}
+.side-3 p{
+    width: 70%;
+}
+.letsPlay{
+    padding: 0 9% 8%;
+}
+.letPlay-text{
+    font-size: 4.5em;
+    margin-bottom: 1.3em;
+}
+.letPlay-link{
+    text-decoration: none;
+    background-color: var(--link-bg2);
+    color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.endless-payment{
+    background-color: var(--text-color);
+    padding: 5% 8%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.endless-payment h1{
+    width: 50%;
+    text-align: center;
+    font-family: Millik, sans-serif;
+    font-size: 4em;
+    margin-bottom: 0.6em;
+}
+.endless-payment > p{
+    width: 50%;
+    font-size: 1.2em;
+    text-align: center;
+}
+.endless-payment .colored-pink{
+    color: #f1a5c2;
+}
+.endless-payment-card{
+    gap: 2em;
+    width: 100%;
+    position: relative;
+    height: 300px;
+}
+.endless-payment-card div{
+    width: 43vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    height: 100%;
+    border-radius: 25px;
+    flex: 0 1 auto;
+    overflow: hidden;
+    text-align: left;
+    padding: 2em;
+    /* transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1); */
+}
+.endless-payment-card div:first-child:hover .endless-payment-card div:last-child{
+    transform: translateX(70%);
+}
+.endless-payment-card div:nth-child(1){
+    /* z-index: 10; */
+    background-color: green;
+}
+.endless-payment-card div:nth-child(2){
+    background-color: blue;
+    transform: translateX(50%);
+    z-index: 2;
+}
+.endless-payment-card div:last-child{
+    transform: translateX(100%) !important;
+    background-color: red;
+    z-index: 3;
+}
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+    .endless-pay{
+        padding: 9% 5%;
+    }
+    .top-nav{
+        padding: 0 5%;
+        gap: 2em;
+    }
+    .list-itemm li a{
+        padding: 0 8px;
+    }
+    .showcase{
+        padding: 4% 5%;
+    }
+    .trusted{
+        padding: 0 5%;
+    }
+    .small-business{
+        padding: 8% 5%;
+    }
+    .letsPlay{
+        padding: 0 5% 4%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .endless-pay{
+        padding: 9% 5%;
+    }
+    .small-business{
+        padding: 8% 5%;
+    }
+    .letsPlay{
+        padding: 0 5% 4%;
+    }
+    .letPlay-text{
+        font-size: 2.5em;
+        margin-bottom: 1.3em;
+    }
+    .trusted{
+        padding: 0 5%;
+    }
+    .top-nav{
+        padding: 0 5%;
+    }
+    .showcase h1{
+        font-size: 4em;
+        font-family: Millik, sans-serif;
+        color: black;
+        width: 50%;
+    }
+    .side-2{
+        position: relative;
+        transform: translateY(-22%);
+    }
+    .side-2 .bottom{
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 2em;
+        max-width: 100%;
+    }
+    .endless-pay h1{
+        font-size: 3em;
+        width: 80%;
+    }
+    .checkout-img{
+        width: 50%;
+    }
+    .top2{
+        margin-bottom: 10%;
+    }
+    .showcase{
+        padding: 4% 5%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .small-business{
+        padding: 8% 5%;
+    }
+    .endless-pay{
+        padding: 9% 5%;
+    }
+    .letsPlay{
+        padding: 0 5% 4%;
+    }
+    .letPlay-text{
+        font-size: 2em;
+        margin-bottom: 1.3em;
+    }
+    .trusted{
+        padding: 0 5%;
+    }
+    .top-nav{
+        padding: 0 5%;
+    }
+    .showcase{
+        padding: 4% 5%;
+    }
+    .showcase p{
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .side-3{
+        margin-left: 0;
+    }
+    .side-3 p{
+        width: 100%;
+    }
+    .creator-section{
+        flex-direction: column-reverse;
+    }
+    .creator{
+        transform: translateY(0);
+        margin-top: 30px;
+    }
+    .creator-img{
+        width: 100%;
+    }
+    .small-business h1{
+        font-size: 2em;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .store p{
+        width: 100%;
+    }
+    .store-div{
+        padding: 0;
+    }
+    .store-img{
+        width: 100%;
+    }
+    .top2{
+        margin-bottom: 10%;
+    }
+    .checkout-img{
+        width: 50%;
+    }
+    .trusted{
+        margin-top: 20px;
+    }
+    .trusted h3{
+        font-size: 1.2em;
+    }
+    .trusted-logo img{
+        width: 80%;
+    }
+    .trusted-logo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .clothe-grid{
+        gap: 1.5em;
+        margin: auto;
+    }
+    .side-2 .bottom{
+        max-width: 100%;
+    }
+    .side-2{
+        transform: translateY(0);
+        flex-direction: column-reverse !important;
+    }
+    .first-sidepic{
+        height: auto;
+    }
+    .showcase h1{
+        font-size: 3em;
+        width: 100%;
+    }
+    .endless-pay h1{
+        font-size: 3em;
+        width: 80%;
+    }
+}

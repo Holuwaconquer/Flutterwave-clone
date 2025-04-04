@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+        }
+        .product-wrapper{
+            width: 115%;
+            /* height: auto; */
+            margin: auto;
+            display: flex;
+            overflow-x: scroll;
+            gap: 20px;
+        }
+        .product-holder{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            flex: none;
+            /* width: 100%; */
+            gap: 20px;
+            padding: 10px;
+        }
+        .product{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            padding: 20px;
+            border-radius: 30px;
+            /* margin-right: 10px; */
+        }
+        .product-wrapper::-webkit-scrollbar{
+            display: none;
+        }
+        .product-check{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            margin: 20px auto;
+            height: 100%;
+        }
+        #back-arrow{
+            width: 80px;
+            height: 40px;
+            background-color: rgba(187, 187, 187, 0.459);
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        #next-arrow{
+            width: 80px;
+            height: 40px;
+            background-color: orange;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .arrow-btn{
+            margin-left: 10px;
+            margin-top: 15px;
+            gap: 1.5em;
+        }
+        header{
+            background-color: rgb(1, 66, 36);
+            /* height: 100vh; */
+            width: 100%;
+            padding: 0 8%;
+        }
+        .showcase{
+            padding: 5% 0%;
+        }
+        .furniture-content h5{
+            font-size: 14px;
+            background-color: rgba(187, 187, 187, 0.459);
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 30px;
+            text-align: center;
+            display: inline-block;
+        }
+        .furniture-content h1{
+            color: #fff;
+            font-size: 2.8em;
+            font-weight: bolder;
+            /* width: 70%; */
+        }
+        .furniture-content p{
+            color: #fff;
+            font-size: 14px;
+        }
+        .furniture-content .first{
+            text-decoration: none;
+            background-color: orange;
+            padding: 15px 30px;
+            color: #fff;
+            border-radius: 30px;
+            margin-right: 3%;
+        }
+        .logo{
+            color: #fff;
+        }
+        .furniture-content a{
+            color: #fff;
+        }
+        .nav ul {
+            /* display: flex; */
+        }
+        .nav ul li{
+            list-style-type: none;
+            display: inline-block;
+        }
+        .nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            padding: 0 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        .nav ul li a::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: orange;
+            bottom: -5px;
+            left: 10px;
+        }
+        .nav ul li a:hover::after{
+            width: 80%;
+            transition: linear 0.2s;
+        }
+        .link-icon ul{
+            display: flex;
+            align-items: center;
+        }
+        .link-icon li{
+            padding: 0 10px;
+            list-style-type: none;
+            color: #fff;
+        }
+        .cta{
+            background-color: orange;
+            padding: 0 8%;
+        }
+        .charact{
+            padding: 5% 8%;
+        }
+        .charact-svg{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            position: relative;
+            border-radius: 50%;
+            z-index: 1;
+            margin-bottom: 10px;
+            color: black;
+        }
+        .charact-svg::before{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: -10px;
+            top: 0;
+            background-color: rgba(187, 187, 187, 0.459);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="cta d-flex py-2 justify-content-between align-items-center">
+        <div>
+            Follow us
+        </div>
+        <div>
+            Sign up to get 50% discout
+        </div>
+        <div>
+            +2349025140981
+        </div>
+    </div>
+    <header>
+        <div class="top-nav py-4 d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <h2>FurniFlex</h2>
+            </div>
+            <div class="nav d-none d-md-block d-lg-block">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Categories</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </div>
+            <div class="link-icon d-none d-md-block d-lg-block">
+                <ul>
+                    <li>S</li>
+                    <li>C</li>
+                    <li>CS</li>
+                    <li>P</li>
+                </ul>
+            </div>
+        </div>
+    <div class="showcase">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-4 furniture-content">
+                <h5>FURNITURE DESIGNS IDEAS</h5>
+                <h1 class="mb-4">
+                    Modern Interior Design Studio
+                </h1>
+                <p class="mb-5">
+                    Choosing the right furniture for your home online will add
+                    elegance and functionality to your interior while also
+                    being cost effective and long lasting.
+                </p>
+                <a class="first" href="">Shop Now</a> <a href="">Follow Instagram</a>
+                <div class="d-flex mt-5 justify-content-between text-white align-items-center">
+                    <div>
+                        <h4 class="fw-bold">2500+</h4>
+                        <p>Unique Styles</p>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold">5000+</h4>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold">300+</h4>
+                        <p>Certified Outlets</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="product-check">
+                    <div class="product-wrapper">
+                        <div class="product-holder">
+                            <div class="product product1">
+                                <h2>Shoe</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Praesentium maiores odit vero soluta
+                                    beatae reiciendis illo at adipisci tenetur magni?
+                                </p>
+                                <a href="">Checkout</a>
+                            </div>
+                            <div class="product product2">
+                                <h2>Shoe</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Praesentium maiores odit vero soluta
+                                    beatae reiciendis illo at adipisci tenetur magni?
+                                </p>
+                                <a href="">Checkout</a>
+                            </div>
+                            <div class="product product3">
+                                <h2>Shoe</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Praesentium maiores odit vero soluta
+                                    beatae reiciendis illo at adipisci tenetur magni?
+                                </p>
+                                <a href="">Checkout</a>
+                            </div>
+                        </div>
+                        <div class="product-holder">
+                            <div class="product product6">
+                                <h2>Shoe</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Praesentium maiores odit vero soluta
+                                    beatae reiciendis illo at adipisci tenetur magni?
+                                </p>
+                                <a href="">Checkout</a>
+                            </div>
+                            <div class="product product7">
+                                <h2>Shoe</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Praesentium maiores odit vero soluta
+                                    beatae reiciendis illo at adipisci tenetur magni?
+                                </p>
+                                <a href="">Checkout</a>
+                            </div>
+                            <div class="product product8">
+                                <h2>Shoe</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Praesentium maiores odit vero soluta
+                                    beatae reiciendis illo at adipisci tenetur magni?
+                                </p>
+                                <a href="">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow-btn d-flex align-items-center">
+                        <div id="back-arrow"></div>
+                        <div id="next-arrow"></div>
+                    </div>
+                </div>   
+            </div>
+            <!-- end of col-md-8 -->
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of showcase -->
+</header>
+
+
+    <div class="charact">
+        <div class="row gy-4">
+            <div class="col-6 col-md-3">
+                <div class="charact-svg">D</div>
+                <h4>Fast and Free Shipping</h4>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="charact-svg">D</div>
+               <h4>Easy to Shop</h4>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="charact-svg">D</div>
+                <h4>24/7 Support</h4>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="charact-svg">D</div>
+                <h4>Hassle Free Returns</h4>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+
+
+
+   <script>
+    let backArrow = document.getElementById('back-arrow')
+    let nextArrow = document.getElementById('next-arrow')
+    let scrollProduct = document.querySelector('.product-wrapper')
+
+    scrollProduct.addEventListener('wheel', (evt)=>{
+        evt.preventDefault();
+        scrollProduct.scrollLeft += evt.deltaY
+    })
+    nextArrow.addEventListener('click', () =>{
+        scrollProduct.scrollLeft += 1000;
+        scrollProduct.style.scrollBehavior = "smooth"
+    })
+    backArrow.addEventListener('click', () =>{        
+        scrollProduct.scrollLeft -= 1000;
+        scrollProduct.style.scrollBehavior = "smooth"
+    })
+   </script>
+</body>
+</html>
