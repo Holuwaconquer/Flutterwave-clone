@@ -239,7 +239,7 @@ main{
     font-size: 1.2em;
     text-align: center;
 }
-.endless-payment .colored-pink{
+.colored-pink{
     color: #f1a5c2;
 }
 .endless-payment-card{
@@ -247,37 +247,220 @@ main{
     width: 100%;
     position: relative;
     height: 300px;
+    margin-top: 40px;
 }
 .endless-payment-card div{
     width: 43vw;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #313131;
+    background: #313131;
+    background-size: cover;
     height: 100%;
     border-radius: 25px;
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     overflow: hidden;
     text-align: left;
-    padding: 2em;
-    /* transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1); */
+    padding: 2.5em;
+    transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0px 25px 50px rgba(0,0,0,.8);
 }
-.endless-payment-card div:first-child:hover .endless-payment-card div:last-child{
-    transform: translateX(70%);
+.endless-payment-card div h5{
+    margin-bottom: 20px;
 }
-.endless-payment-card div:nth-child(1){
-    /* z-index: 10; */
-    background-color: green;
+.endless-payment-card div p{
+    width: 90%;
+    font-size: 14px;
+}
+.endless-payment-card div::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    background: url(./asset/box-bg.png) center center no-repeat;
+    background-size: cover;
+}
+.endless-payment-card a{
+    color: white;
 }
 .endless-payment-card div:nth-child(2){
-    background-color: blue;
     transform: translateX(50%);
-    z-index: 2;
 }
 .endless-payment-card div:last-child{
-    transform: translateX(100%) !important;
-    background-color: red;
+    transform: translateX(100%);
     z-index: 3;
+}
+.developerApi{
+    padding: 7% 8%;
+    background-color: var(--sub-bg);
+}
+.developerApi h1{
+    font-family: Millik, sans-serif;
+    font-size: 4.5em;
+    width: 70%;
+    margin-bottom: 40px;
+}
+.developerApi p{
+    width: 50%;
+    font-size: 20px;
+}
+.developerApi ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 40px;
+}
+.developerApi ul li{
+    display: flex;
+    gap: 1em;
+    padding: 10px 0;
+}
+.listCircle{
+    width: 20px;
+    height: 15px;
+    background-color: var(--link-bg2);
+    border-radius: 50%;
+}
+.apiLink{
+    background-color: var(--link-bg2);
+    text-decoration: none;
+    color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.mapSide{
+    gap: 3em 2em;
+}
+.leftLine{
+    width: 2px;
+    height: 25px;
+    background-color: var(--link-bg2);
+    margin-right: 10%;
+    position: relative;
+}
+.leftLine::before{
+    content: '';
+    height: 300%;
+    /* width: 2px; */
+    border-left: 2px dotted #313131;
+    position: absolute;
+    top: 120%;
+    left: 0;
+}
+.global-reach{
+    padding: 8%;
+    width: 100%;
+}
+.global-reach ul{
+    padding: 0;
+    list-style: none;
+}
+.global-reach h1{
+    font-family: Millik, sans-serif;
+    font-size: 4em;
+    margin-bottom: 6%;
+}
+.colored-blue{
+    color: #6672c7;
+}
+
+.mapBox{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: linear-gradient(#262c55, #262c55);
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+.mapBox img{
+    animation: globe 20s infinite linear;
+    width: 300%;
+    position: relative;
+    /* height: 100%; */
+}
+.mapBox img::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 1000000000;
+    position: absolute;
+}
+.getStarted{
+    padding: 10%;
+}
+.getStartedBox{
+    border-radius: 30px;
+    padding: 10%;
+    color: white;
+    margin: auto;
+    background-color: #1d1d1d;
+    box-shadow: 0px 25px 50px rgba(29, 29, 29, .5);
+}
+.getStartedBox h1{
+    font-size: 3.5em;
+    font-family: Millik, sans-serif;
+    margin-bottom: 40px;
+}
+.getStartedBox p{
+    font-size: 20px;
+    margin-bottom: 2.5em;
+}
+.getStartedBox a:first-child{
+    background-color: var(--link-bg1);
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 25px;
+    border-radius: 8px;
+}
+.getStartedLink{
+    background-color: var(--link-bg1);
+    text-decoration: none;
+    color: var(--text-color) !important;
+    padding: 25px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.getStartedBox a{
+    text-decoration: none;
+    color: white;
+}
+.getStartedBox a:hover i{
+    margin-left: 10px;
+    transition: all 0.3s linear;
+}
+footer{
+    padding: 5% 8%;
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+footer ul li{
+    padding: 10px 0;
+}
+@keyframes globe {
+    0%{
+        transform: translateX(0%);
+    }
+    
+    100%{
+        transform: translateX(-50%);
+    }
+    50%{
+        transform: translateX(-30%);
+    }
+    0%{
+        transform: translateX(-10%);
+    }
+    /* 100%{
+        transform: translateX(70%);
+    } */
 }
 @media screen and (min-width: 992px) and (max-width: 1300px) {
     .endless-pay{
