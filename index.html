@@ -12,20 +12,74 @@
 <body>
     <header>
         <div class="top-nav d-flex py-5 align-items-center justify-content-between">
-                <div class="logo">
-                    <h3>flutterwave</h3>
-                </div>
-                <div>
-                    <ul class="list-itemm d-none d-lg-block">
+            <div class="logo">
+                <h3>flutterwave</h3>
+            </div>
+            <div>
+                <ul class="list-itemm d-lg-block">
+                    <div class="linkDropdown Enterprise-drop">
                         <li class=""><a href="">Enterprise</a></li>
+                        <div class="dropDown-Content bg-white row shadow">
+                            <div class="col-4 paragraph bg-light p-4">
+                                <p class="p-3">Payment solutions</li>
+                                <p class="p-3">Grow your business</li>
+                            </div>
+                            <div class="col-6 p-4 bg-white">
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        <h4>Accept</h4>
+                                        <p>Easily receive online payments 
+                                            from around the world in different currencies.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4>Pay</h4>
+                                        <p>
+                                            Experience effortless cross-border payouts add
+                                            transfers in various currencies worldwide
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4>Swap</h4>
+                                        <p>
+                                            Swap your Naira for Dollars, Euros and Pounds
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4>POS systems</h4>
+                                        <p>
+                                            Point of sales devices with multiple payment
+                                            methods to grow your physical business
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4>Checkout demo</h4>
+                                        <p>
+                                            Experience checkout yourself.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                         <li class=""><a href="">SME</a></li>
+                    </div>
+                    <div>
                         <li class=""><a href="">Personal</a></li>
+                    </div>
+                    <div>
                         <li class=""><a href="">Resources</a></li>
+                    </div>
+                    <div>
                         <li class=""><a href="">Developers</a></li>
+                    </div>
+                    <div>
                         <li class=""><a href="">Company</a></li>
-                    </ul>
-                </div>
-                <div><a class="sign-in d-none d-lg-block" href="">Sign in</a></div>
+                    </div>
+                </ul>
+            </div>
+            <div><a class="sign-in d-lg-block" href="">Sign in</a></div>
         </div>
     </header>
 
@@ -246,7 +300,7 @@
 
       <section class="global-reach">
         <h1>Our <span class="colored-blue">global</span> reach</h1>
-        <div class="w-100 d-flex align-items-center justify-content-between">
+        <div class="w-100 global-reach-globe d-flex align-items-center justify-content-between">
             <div class="mapSide d-flex flex-column">
                 <div class="d-flex">
                     <div class="leftLine"></div>
@@ -313,7 +367,7 @@
 
        <footer>
         <div class="row">
-            <div class="col-lg">
+            <div class="col-sm-6 col-lg">
                 <h4>Products</h4>
                 <ul>
                     <li>Collects Payment</li>
@@ -330,7 +384,7 @@
                     <li>Tuition</li>
                 </ul>
             </div>
-            <div class="col-lg">
+            <div class="col-sm-6 col-lg">
                 <h4>Resources</h4>
                 <ul>
                     <li>Pricing</li>
@@ -343,7 +397,7 @@
                     <li>Dashboard Guide</li>
                 </ul>
             </div>
-            <div class="col-lg">
+            <div class="col-sm-6 col-lg">
                 <h4>Developers</h4>
                 <ul>
                     <li>API Documentation</li>
@@ -351,7 +405,7 @@
                     <li>API Status</li>
                 </ul>
             </div>
-            <div class="col-lg">
+            <div class="col-sm-6 col-lg">
                 <h4>Company</h4>
                 <ul>
                     <li>Customers</li>
@@ -360,7 +414,7 @@
                     <li>Covid 19</li>
                 </ul>
             </div>
-            <div class="col-lg">
+            <div class="col-sm-6 col-lg">
                 <h4>Contact</h4>
                 <ul>
                     <li>hi@flutterwavego.com</li>
@@ -372,7 +426,7 @@
             </div>
         </div>
 
-        <div class="d-flex border-top border-bottom py-3 align-items-center justify-content-between">
+        <div class="footer-social d-flex border-top border-bottom py-0  pb-0 align-items-center justify-content-between">
             <p>Nigeria</p>
             <ul class="list-inline">
                 <li class="list-inline-item">X (formerly Twitter)</li>
@@ -383,7 +437,7 @@
             </ul>
         </div>
 
-        <div class="d-flex justify-content-evenly align-items-center">
+        <div class="footer-terms d-flex justify-content-between py-3 align-items-center">
             <a href="">Privacy notice</a>
             <a href="">Term of use</a>
             <a href="">Cookie notice</a>
@@ -391,26 +445,23 @@
             <a href="">IMS Policy</a>
             <a href="">Send App licenses</a>
         </div>
-        <p>&copy; Flutterwave Technology Solutions Limited is Registered with Central Bank of Nigeria</p>
+        <p class="py-3">&copy; Flutterwave Technology Solutions Limited is Registered with Central Bank of Nigeria</p>
        </footer>
 
 
      <script>
         let endlessCardDiv = document.querySelectorAll('.endless-card-div')
-        let endlesscard2 = document.getElementById('endlesscard2')
-        let endlesscard3 = document.getElementById('endlesscard3')
-        endlesscard2.addEventListener('mouseenter', ()=>{
-            endlesscard3.style.transform= 'translateX(140%)'
-        })
-        endlesscard2.addEventListener('mouseleave', ()=>{
-            endlesscard3.style.transform= ''
-        })
-        console.log(endlessCardDiv[0]);
         endlessCardDiv[0].addEventListener('mouseenter', ()=>{
             endlessCardDiv[1].style.transform = "translateX(90%)"
         })
         endlessCardDiv[0].addEventListener('mouseleave', ()=>{
             endlessCardDiv[1].style.transform = ""
+        })
+        endlessCardDiv[1].addEventListener('mouseenter', ()=>{
+            endlessCardDiv[2].style.transform = "translateX(140%)"
+        })
+        endlessCardDiv[1].addEventListener('mouseleave', ()=>{
+            endlessCardDiv[2].style.transform = ""
         })
         
         

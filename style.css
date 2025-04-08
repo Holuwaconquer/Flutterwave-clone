@@ -31,7 +31,38 @@ body{
     font-family: Millik, sans-serif;
     font-size: 16px;
 }
+.list-itemm{
+    display: flex !important;
+}
+/* this is the section for the dropdown link styles */
+.list-itemm div{
+    position: relative;
+}
+.linkDropdown .dropDown-Content{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    border-radius: 8px;
+    width: 50vw;
+    z-index: 100000000;
+    transform: scale(0, 0);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.Enterprise-drop:hover .dropDown-Content{
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all 0.2s;
+}
+ .paragraph p:hover{
+    cursor: pointer;
+    transition: all 0.2s ;
+    border-radius: 8px;
+    background-color: #c0bfbf;
+ }
 .list-itemm li{
+    list-style-type: none;
     display: inline-block;
 }
 .list-itemm li a{
@@ -40,6 +71,7 @@ body{
     font-size: 15px;
     padding: 0 12px;
     font-weight: 700;
+    padding-bottom: 20px;
 }
 .sign-in{
     background-color: var(--link-bg1);
@@ -197,9 +229,7 @@ main{
 .creator-section{
     gap: 5em;
 }
-.side-3{
-    /* margin-left: 20%; */
-}
+
 .side-3 p{
     width: 70%;
 }
@@ -379,7 +409,6 @@ main{
     animation: globe 20s infinite linear;
     width: 300%;
     position: relative;
-    /* height: 100%; */
 }
 .mapBox img::before{
     content: '';
@@ -435,7 +464,7 @@ main{
     transition: all 0.3s linear;
 }
 footer{
-    padding: 5% 8%;
+    padding: 5% 8% 0;
 }
 footer ul{
     list-style: none;
@@ -443,6 +472,10 @@ footer ul{
 }
 footer ul li{
     padding: 10px 0;
+}
+footer a{
+    text-decoration: none;
+    color: black;
 }
 @keyframes globe {
     0%{
@@ -458,9 +491,19 @@ footer ul li{
     0%{
         transform: translateX(-10%);
     }
-    /* 100%{
-        transform: translateX(70%);
-    } */
+}
+@media screen and (min-width: 992px) and (max-width: 1031px) {
+    .list-itemm li a{
+        font-size: 13px;
+    }
+    .mapBox{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: linear-gradient(#262c55, #262c55);
+        overflow: hidden;
+        transition: all 0.2s linear;
+    }
 }
 @media screen and (min-width: 992px) and (max-width: 1300px) {
     .endless-pay{
@@ -472,6 +515,7 @@ footer ul li{
     }
     .list-itemm li a{
         padding: 0 8px;
+        /* font-size: 12px; */
     }
     .showcase{
         padding: 4% 5%;
@@ -485,8 +529,65 @@ footer ul li{
     .letsPlay{
         padding: 0 5% 4%;
     }
+    .developerApi{
+        padding: 7% 5%;
+    }
+    .global-reach{
+        padding: 5%;
+    }
+    footer{
+        padding: 5% 5% 0;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    .list-itemm{
+        display: none !important;
+    }
+    .sign-in{
+        display: none;
+    }
+    .global-reach-globe{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start !important;
+    }
+    .getStartedBox h1{
+        font-size: 2.5em;
+        font-family: Millik, sans-serif;
+        margin-bottom: 40px;
+    }
+    .getStartedBox p{
+        font-size: 14px;
+    }
+    .developerApi h1{
+        font-size: 4em;
+        width: 100%;
+    }
+    .developerApi p{
+        width: 100%;
+    }
+    .store-div{
+        padding: 6% 5%;
+    }
+    .store-img{
+        width: 100%;
+        height: 100%;
+    }
+    .creator{
+        transform: translateY(0)
+    }
+    .creator-img{
+        width: 100%;
+    }
+    .creator p{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .creator-section{
+        gap: 5em;
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
     .endless-pay{
         padding: 9% 5%;
     }
@@ -535,6 +636,15 @@ footer ul li{
     .showcase{
         padding: 4% 5%;
     }
+    .developerApi{
+        padding: 7% 5%;
+    }
+    .global-reach{
+        padding: 5%;
+    }
+    footer{
+        padding: 5% 5% 0;
+    }
 }
 @media screen and (max-width: 767px) {
     .small-business{
@@ -544,7 +654,7 @@ footer ul li{
         padding: 9% 5%;
     }
     .letsPlay{
-        padding: 0 5% 4%;
+        padding: 0 5% 6%;
     }
     .letPlay-text{
         font-size: 2em;
@@ -634,5 +744,152 @@ footer ul li{
     .endless-pay h1{
         font-size: 3em;
         width: 80%;
+    }
+    .developerApi{
+        padding: 7% 5%;
+    }
+    .developerApi h1{
+        font-size: 2.5em;
+        width: 100%;
+    }
+    .developerApi p{
+        width: 100%;
+    }
+    .global-reach{
+        padding: 5%;
+    }
+    footer{
+        padding: 5% 5% 0;
+    }
+    .endless-payment h1{
+        width: 100%;
+        font-size: 3em;
+    }
+    .endless-payment > p{
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+    }
+    .endless-payment-card{
+        width: 100%;
+        position: relative;
+        height: auto !important;
+        margin-top: 40px;
+    }
+    .endless-payment-card div{
+        width: 100%;
+        position: static !important;
+        background: #313131;
+        background-size: cover;
+        height: 300px;
+        border-radius: 25px;
+        overflow: hidden;
+        text-align: left;
+        padding: 2.5em;
+        transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0px 25px 50px rgba(0,0,0,.8);
+        margin-bottom: 20px;
+    }
+    .endless-payment-card div:nth-child(2){
+        transform: translateX(0) !important;
+    }
+    .endless-payment-card div:last-child{
+        transform: translateX(0) !important;
+        z-index: 3;
+    }
+    .global-reach-globe{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start !important;
+    }
+    .mapBox{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: linear-gradient(#262c55, #262c55);
+        overflow: hidden;
+        transition: all 0.2s linear;
+    }
+}
+@media screen and (max-width: 500px) {
+    .mapBox{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    .developerApi h1{
+        font-size: 2em;
+        width: 100%;
+    }
+    .global-reach h1{   
+        font-size: 2em;
+    }
+    .letsPlay{
+        margin-bottom: 40px;
+    }
+    .letPlay-text{
+        font-size: 1em;
+        text-align: justify;
+        margin-bottom: 2em;
+    }
+    .endless-payment h1{
+        font-size: 1.5em;
+    }
+    .endless-payment > p{
+        font-size: 14px;
+    }
+    .endless-payment-card div p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .endless-pay h1{
+        font-size: 2em;
+        width: 100%;
+    }
+    .contact-btn{
+        background-color: var(--link-bg1);
+        text-decoration: none;
+        color: var(--text-color);
+        padding: 25px;
+        border-radius: 8px;
+        display: inline-block;
+    }
+    .acct-btn{
+        background-color: var(--link-bg2);
+        text-decoration: none;
+        color: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        margin-right: 20px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .getStartedBox h1{
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .getStartedBox p{
+        font-size: 12px;
+        margin-bottom: 2.5em;
+    }
+    .getStartedBox a:first-child{
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .getStartedLink{
+        padding: 15px;
+        margin-right: 10px;
+    }
+    .footer-social{
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .footer-social ul li{
+        display: block !important;
+    }
+    .footer-terms{
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1em;
     }
 }
