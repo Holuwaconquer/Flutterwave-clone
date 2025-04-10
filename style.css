@@ -38,19 +38,59 @@ body{
 .list-itemm div{
     position: relative;
 }
-.linkDropdown .dropDown-Content{
-    position: absolute;
-    top: 30px;
-    left: 0;
+.dropDown-Content{
+    position: absolute !important;
     border-radius: 8px;
-    width: 50vw;
+    opacity: 0;
     z-index: 100000000;
     transform: scale(0, 0);
     transition: all 0.2s ease-in-out;
-    opacity: 0;
 }
-
+.Enterprise-drop .dropDown-Content{
+    top: 30px;
+    left: 0;
+    width: 50vw;
+}
 .Enterprise-drop:hover .dropDown-Content{
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all 0.2s;
+}
+.sme-drop .dropDown-Content{
+    top: 30px;
+    left: -200px;
+    width: 70vw;
+}
+.sme-drop:hover .dropDown-Content{
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all 0.2s;
+}
+.personal-drop .dropDown-Content{
+    top: 30px;
+    left: -20px;
+    width: 20vw;
+}
+.personal-drop:hover .dropDown-Content{
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all 0.2s;
+}
+.dropDown-Content ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.dropDown-Content ul li{
+    display: block;
+    padding: 10px;
+}
+.resources-drop .dropDown-Content{
+    top: 30px;
+    left: -20px;
+    width: 20vw;
+}
+.resources-drop:hover .dropDown-Content{
     opacity: 1;
     transform: scale(1, 1);
     transition: all 0.2s;
@@ -647,6 +687,9 @@ footer a{
     }
 }
 @media screen and (max-width: 767px) {
+    .list-itemm{
+        display: none !important;
+    }
     .small-business{
         padding: 8% 5%;
     }
@@ -702,6 +745,9 @@ footer a{
     }
     .store-img{
         width: 100%;
+    }
+    .sign-in{
+        display: none;
     }
     .top2{
         margin-bottom: 10%;
@@ -891,5 +937,11 @@ footer a{
         flex-direction: column;
         align-items: flex-start !important;
         gap: 1em;
+    }
+    .list-itemm{
+        display: none !important;
+    }
+    .sign-in{
+        display: none;
     }
 }
